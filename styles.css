@@ -1,0 +1,53 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, hsl(0, 0%, 100%), #ffffff);
+    overflow: hidden;
+    cursor: none;
+}   
+
+#imageWrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 1;
+}
+
+#leftImage, #rightImage {
+    max-width: 400px;
+    object-fit: contain;
+}
+
+#middleImage {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+
+#sunCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.spin-gif {
+    position: fixed;
+    width: 200px; /* Adjust size as needed */
+    height: 200px;
+    object-fit: contain;
+    z-index: 4;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+    filter: hue-rotate(220deg);
+    transition: opacity 0.5s ease-out;
+}
